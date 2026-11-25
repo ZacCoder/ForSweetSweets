@@ -1,0 +1,645 @@
+
+
+/* ==========================================
+   FOR SWEETSWEET 💙
+   Romantic Interactive Website
+   Designed with Love
+========================================== */
+
+
+/* ==========================================
+   1. GLOBAL RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 10% 10%, #ffffff 0%, transparent 30%),
+        radial-gradient(circle at 90% 90%, #ffe5f0 0%, transparent 35%),
+        linear-gradient(135deg, #dff4ff, #e9eaff, #fce4ec);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    color: #263b59;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   2. MAIN CARD
+========================================== */
+
+.card {
+    width: 100%;
+    max-width: 570px;
+
+    padding: 40px 30px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(65, 100, 150, 0.15),
+        0 5px 20px rgba(255, 255, 255, 0.6);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: cardAppear 0.8s ease;
+}
+
+
+/* Decorative circles */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    top: -100px;
+    right: -80px;
+
+    background: #dceeff;
+
+    border-radius: 50%;
+
+    opacity: 0.55;
+
+    pointer-events: none;
+}
+
+.card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    bottom: -100px;
+    left: -80px;
+
+    background: #ffe5f0;
+
+    border-radius: 50%;
+
+    opacity: 0.6;
+
+    pointer-events: none;
+}
+
+
+/* Keep card content above decorations */
+
+.card > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ==========================================
+   3. EMOJI ANIMATION
+========================================== */
+
+.emoji {
+    font-size: 65px;
+
+    margin-bottom: 18px;
+
+    animation: bounce 2s infinite;
+
+    display: inline-block;
+}
+
+
+/* ==========================================
+   4. HEADINGS
+========================================== */
+
+h1 {
+    color: #426aaf;
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    color: #426aaf;
+
+    font-size: 1.15rem;
+
+    margin-top: 25px;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   5. PARAGRAPHS
+========================================== */
+
+p {
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    color: #586b87;
+
+    margin-bottom: 12px;
+}
+
+
+/* Main question */
+
+.question {
+    font-size: 1.3rem;
+
+    font-weight: 800;
+
+    color: #344e79;
+
+    margin: 28px 0 20px;
+}
+
+
+/* ==========================================
+   6. BUTTON AREA
+========================================== */
+
+.button-area {
+    position: relative;
+
+    min-height: 125px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+
+/* ==========================================
+   7. GENERAL BUTTON DESIGN
+========================================== */
+
+button {
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 14px 28px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ==========================================
+   8. YES BUTTON
+========================================== */
+
+#yesButton {
+    background: linear-gradient(
+        135deg,
+        #7daaf3,
+        #5688df
+    );
+
+    color: white;
+
+    box-shadow:
+        0 7px 18px rgba(86, 136, 223, 0.3);
+}
+
+#yesButton:hover {
+    background: linear-gradient(
+        135deg,
+        #6799e8,
+        #477bd1
+    );
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 10px 25px rgba(86, 136, 223, 0.4);
+}
+
+#yesButton:active {
+    transform: scale(0.95);
+}
+
+
+/* ==========================================
+   9. NO BUTTON
+========================================== */
+
+#noButton {
+    background: #eeeeee;
+
+    color: #777777;
+
+    position: absolute;
+
+    left: 55%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================
+   10. SMALL TEXT
+========================================== */
+
+.small {
+    font-size: 0.85rem;
+
+    color: #8290a5;
+
+    margin-top: 25px;
+}
+
+
+/* ==========================================
+   11. HIDDEN SECTIONS
+========================================== */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ==========================================
+   12. HANGOUT OPTIONS
+========================================== */
+
+.date-options {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+
+    margin-top: 22px;
+}
+
+
+/* Hangout buttons */
+
+.date-option {
+    width: 100%;
+
+    padding: 18px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #edf5ff,
+        #f5f8ff
+    );
+
+    color: #426aaf;
+
+    border: 2px solid #e2edff;
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    font-size: 1rem;
+
+    line-height: 1.5;
+
+    box-shadow:
+        0 5px 15px rgba(100, 145, 210, 0.08);
+}
+
+
+/* Hover effect */
+
+.date-option:hover {
+    background: #e1edff;
+
+    border-color: #8bb5f5;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 9px 20px rgba(100, 145, 210, 0.16);
+}
+
+
+/* Selected option */
+
+.date-option.selected {
+    background: linear-gradient(
+        135deg,
+        #6799e8,
+        #4d80d5
+    );
+
+    color: white;
+
+    border-color: #4d80d5;
+}
+
+
+/* ==========================================
+   13. ACTIVITY SCREEN
+========================================== */
+
+#activityScreen {
+    animation: screenAppear 0.6s ease;
+}
+
+#activityTitle {
+    margin-top: 10px;
+    color: #426aaf;
+}
+
+#activityDescription {
+    margin: 15px 0;
+}
+
+
+/* ==========================================
+   14. MESSAGE BOX / LOVE LETTER
+========================================== */
+
+.message-box {
+    background: linear-gradient(
+        135deg,
+        #fff3f8,
+        #fff8fc
+    );
+
+    border: 1px solid #ffe0ed;
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    box-shadow:
+        0 8px 25px rgba(200, 120, 160, 0.08);
+}
+
+.message-box strong {
+    color: #a34c78;
+
+    font-size: 1rem;
+}
+
+.message-box p {
+    margin: 15px 0;
+
+    color: #66576a;
+}
+
+
+/* ==========================================
+   15. FINAL CONGRATULATIONS SCREEN
+========================================== */
+
+#finalScreen {
+    animation: screenAppear 0.7s ease;
+}
+
+#finalScreen .emoji {
+    font-size: 75px;
+}
+
+#finalScreen h1 {
+    color: #426aaf;
+}
+
+
+/* ==========================================
+   16. FLOATING HEARTS
+========================================== */
+
+.heart {
+    position: fixed;
+
+    bottom: -30px;
+
+    font-size: 24px;
+
+    animation: floatUp 4s linear forwards;
+
+    pointer-events: none;
+
+    z-index: 1000;
+}
+
+
+/* ==========================================
+   17. ANIMATIONS
+========================================== */
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+@keyframes floatUp {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+@keyframes screenAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   18. RESPONSIVE DESIGN - MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px;
+
+        align-items: center;
+    }
+
+    .card {
+        padding: 32px 20px;
+
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 1.65rem;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    .emoji {
+        font-size: 55px;
+    }
+
+    .question {
+        font-size: 1.15rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    button {
+        font-size: 0.95rem;
+
+        padding: 13px 23px;
+    }
+
+    .date-option {
+        padding: 16px;
+
+        font-size: 0.92rem;
+    }
+
+    .message-box {
+        padding: 20px;
+    }
+
+    #finalScreen .emoji {
+        font-size: 65px;
+    }
+
+}
+
+
+/* ==========================================
+   19. ACCESSIBILITY
+========================================== */
+
+button:focus-visible {
+    outline: 3px solid #426aaf;
+
+    outline-offset: 4px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}
