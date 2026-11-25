@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For SweetSweet 💙</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="card">
+
+        <!-- WELCOME -->
+        <div class="emoji">🧸💙</div>
+
+        <h1>Hey, SweetSweet!</h1>
+
+        <p>
+            Congratulations again, Lovelove! 🎉
+            <br>
+            Your personal developer has prepared
+            a very important proposal.
+        </p>
+
+        <!-- QUESTION SCREEN -->
+        <section id="questionScreen">
+
+            <div class="question">
+                Will you finally hang out with me? 🥺
+            </div>
+
+            <p>
+                No expensive date required.
+                <br>
+                Just you, me, and hopefully some food. 😂
+            </p>
+
+            <div class="button-area" id="buttonArea">
+
+                <button id="yesButton" onclick="sayYes()">
+                    YES! 💙
+                </button>
+
+                <button id="noButton">
+                    No 🙄
+                </button>
+
+            </div>
+
+            <p id="funnyText" class="small">
+                Choose wisely, etch. 👀
+            </p>
+
+        </section>
+
+
+        <!-- YES SCREEN -->
+        <section id="yesScreen" class="hidden">
+
+            <div class="emoji">😭💙🎉</div>
+
+            <h1>YIEEE! SHE SAID YES!</h1>
+
+            <p>
+                Hangout request accepted!
+                <br>
+                Developer successfully deployed. 😂
+            </p>
+
+
+            <!-- HANGOUT CHOICES -->
+            <div id="hangoutChoices">
+
+                <h3>Choose our little adventure:</h3>
+
+                <div class="date-options">
+
+                    <button
+                        class="date-option"
+                        onclick="goToHangout('walk')">
+
+                        🚶‍♀️ A simple walk together
+
+                    </button>
+
+                    <button
+                        class="date-option"
+                        onclick="goToHangout('snack')">
+
+                        🍰 A cute little snack date
+
+                    </button>
+
+                    <button
+                        class="date-option"
+                        onclick="goToHangout('peaceful')">
+
+                        🌿 A peaceful place and lots of stories
+
+                    </button>
+
+                    <button
+                        class="date-option"
+                        onclick="goToHangout('together')">
+
+                        💙 Anywhere, as long as we're together
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SELECTED HANGOUT SCREEN -->
+            <div id="activityScreen" class="hidden">
+
+                <div class="emoji" id="activityEmoji">
+                    💙
+                </div>
+
+                <h1 id="activityTitle">
+                    Our little adventure
+                </h1>
+
+                <p id="activityDescription"></p>
+
+                <div class="message-box">
+
+                    <p id="activityMessage"></p>
+
+                </div>
+
+                <button
+                    onclick="continueToSurprise()"
+                    style="background:#6799e8; color:white; margin-top:20px;">
+
+                    Continue to your surprise 💌
+
+                </button>
+
+                <button
+                    onclick="backToOptions()"
+                    style="background:#eeeeee; color:#777; margin-top:10px;">
+
+                    Change my choice ↩️
+
+                </button>
+
+            </div>
+
+
+            <!-- FINAL CONGRATULATIONS SCREEN -->
+            <div id="finalScreen" class="hidden">
+
+                <div class="emoji">🎓💐💙</div>
+
+                <h1>Congratulations, Lovelove!</h1>
+
+                <p>
+                    You did it, etch! 🥹
+                    <br>
+                    I'm so proud of you and everything
+                    you've worked hard for.
+                </p>
+
+                <div class="message-box">
+
+                    <strong>For my Lovelove,</strong>
+
+                    <p>
+                        Congratulations on passing,
+                        my SweetSweet. I know this
+                        achievement means so much,
+                        and I wish I could be there
+                        beside you to celebrate
+                        and see your happy face.
+                    </p>
+
+                    <p>
+                        I'm proud of the person you are,
+                        of your determination, and of
+                        how far you've come.
+                        You deserve to feel happy
+                        and celebrated today.
+                    </p>
+
+                    <p>
+                        I wanted to make something
+                        with my own hands and skills,
+                        something that carries
+                        a little piece of my heart to you.
+                    </p>
+
+                    <p>
+                        I may not have a big gift to give,
+                        but I have this little creation,
+                        my time, my effort, and
+                        so much love for you.
+                    </p>
+
+                    <p>
+                        I hope we get to make more
+                        beautiful memories together,
+                        even through the simplest
+                        little adventures.
+                    </p>
+
+                    <p>
+                        I love you, Lovelove.
+                        I'm genuinely so happy for you.
+                        You did amazing. 🥺💙
+                    </p>
+
+                    <strong>
+                        Always cheering for you,
+                        <br>
+                        Your silly developer 💙
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <p class="small">
+            Made with HTML, CSS, JavaScript,
+            and a little bit of love. 💙
+        </p>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
